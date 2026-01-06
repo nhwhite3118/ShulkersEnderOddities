@@ -1,4 +1,4 @@
-package com.nhwhite3118.shulkerssubtlemobbehaviors;
+package com.nhwhite3118.shulkersenderoddities;
 
 import org.slf4j.Logger;
 
