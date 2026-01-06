@@ -1,0 +1,13 @@
+{
+  "itemGroup.shulkersenderoddities": "Example Mod Tab",
+  "block.shulkersenderoddities.example_block": "Example Block",
+  "item.shulkersenderoddities.example_item": "Example Item",
+
+  "shulkersenderoddities.configuration.title": "Shulkers Ender Oddities Configs",
+  "shulkersenderoddities.configuration.section.shulkersenderoddities.common.toml": "Shulkers Ender Oddities Configs",
+  "shulkersenderoddities.configuration.section.shulkersenderoddities.common.toml.title": "Shulkers Ender Oddities Configs",
+  "shulkersenderoddities.configuration.items": "Item List",
+  "shulkersenderoddities.configuration.logDirtBlock": "Log Dirt Block",
+  "shulkersenderoddities.configuration.magicNumberIntroduction": "Magic Number Text",
+  "shulkersenderoddities.configuration.magicNumber": "Magic Number"
+}
