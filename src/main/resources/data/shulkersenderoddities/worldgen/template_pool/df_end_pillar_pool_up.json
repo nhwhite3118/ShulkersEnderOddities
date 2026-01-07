@@ -1,0 +1,33 @@
+{
+  "name": "shulkersenderoddities:df_end_pillar_pool_up",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 50,
+      "element": {
+        "location": "shulkersenderoddities:df_end_pillar_loot1",
+        "processors": "minecraft:empty",
+		"projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 70,
+      "element": {
+        "location": "shulkersenderoddities:df_end_pillar_loot2",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 20,
+      "element": {
+        "location": "shulkersenderoddities:df_end_pillar_top",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+}
