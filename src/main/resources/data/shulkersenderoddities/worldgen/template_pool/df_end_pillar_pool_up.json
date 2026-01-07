@@ -3,6 +3,15 @@
   "fallback": "minecraft:empty",
   "elements": [
     {
+      "weight": 1,
+      "element": {
+        "location": "shulkersenderoddities:df_end_pillar_base",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
       "weight": 50,
       "element": {
         "location": "shulkersenderoddities:df_end_pillar_loot1",

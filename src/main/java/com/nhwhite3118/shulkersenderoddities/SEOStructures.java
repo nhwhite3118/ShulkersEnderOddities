@@ -18,11 +18,11 @@ public class SEOStructures {
 
     /**
      * Registers the base structure itself and sets what its path is. In this case,
-     * this base structure will have the resourcelocation of structure_tutorial:sky_structures.
+     * this base structure will have the resourcelocation of shulkersenderoddities:df_end_pillar.
      */
-    public static final DeferredHolder<StructureType<?>, StructureType<DF_End_Pillar>> DF_END_PILLAR = DEFERRED_REGISTRY_STRUCTURE.register("end_island_structures", () -> explicitStructureTypeTyping(DF_End_Pillar.CODEC));
+    public static final DeferredHolder<StructureType<?>, StructureType<DF_End_Pillar>> DF_END_PILLAR = DEFERRED_REGISTRY_STRUCTURE.register("df_end_pillar", () -> explicitStructureTypeTyping(DF_End_Pillar.CODEC));
 
-    /**
+    /** TelepathicGrunt:
      * Originally, I had a double lambda ()->()-> for the RegistryObject line above, but it turns out that
      * some IDEs cannot resolve the typing correctly. This method explicitly states what the return type
      * is so that the IDE can put it into the DeferredRegistry properly.

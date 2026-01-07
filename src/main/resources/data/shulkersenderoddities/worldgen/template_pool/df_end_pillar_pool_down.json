@@ -1,9 +1,9 @@
 {
   "name": "shulkersenderoddities:df_end_pillar_pool_down",
-  "fallback": "minecraft:empty",
+  "fallback": "shulkersenderoddities:df_end_pillar_pool_base",
   "elements": [
     {
-      "weight": 50,
+      "weight": 40,
       "element": {
         "location": "shulkersenderoddities:df_end_pillar_loot1",
         "processors": "minecraft:empty",
@@ -12,7 +12,7 @@
       }
     },
 	{	
-      "weight": 70,
+      "weight": 40,
       "element": {
         "location": "shulkersenderoddities:df_end_pillar_loot2",
         "processors": "minecraft:empty",
