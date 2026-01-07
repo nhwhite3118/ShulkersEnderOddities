@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "rolls": 2,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "value": "minecraft:chests/end_city_treasure",
+          "weight": 1,
+          "quality": 10,
+          "conditions": [],
+          "functions": [
+            {
+              "function": "minecraft:set_damage",
+              "damage": 0.3,
+              "add": true
+            },
+            {
+              "function": "minecraft:enchant_randomly",
+              "only_compatible": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
