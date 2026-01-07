@@ -1,0 +1,15 @@
+{
+  "name": "shulkersenderoddities:df_end_pillar_pool_top",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "location": "shulkersenderoddities:df_end_pillar_top",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+}
