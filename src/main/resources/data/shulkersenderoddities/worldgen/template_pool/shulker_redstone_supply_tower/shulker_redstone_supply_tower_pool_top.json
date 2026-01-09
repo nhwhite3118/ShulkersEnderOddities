@@ -1,0 +1,16 @@
+{
+  "name": "shulkersenderoddities:shulker_redstone_supply_tower_pool_top",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "name": "shulkersenderoddities:shulker_redstone_supply_tower_top",
+        "location": "shulkersenderoddities:shulker_redstone_supply_tower/shulker_redstone_supply_tower_top",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+}
