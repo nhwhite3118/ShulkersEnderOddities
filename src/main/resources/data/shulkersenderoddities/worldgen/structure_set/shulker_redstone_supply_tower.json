@@ -15,11 +15,11 @@
     "salt": 149647565,
 
     "":"The average distance apart in chunks for spawn attempts",
-    "spacing": 36,
+    "spacing": 80,
 
     "":"Minimum distance apart in chunks for spawn attempts",
     "":"MUST ALWAYS BE SMALLER THAN spacing ABOVE",
-    "separation": 20,
+    "separation": 25,
 
     "":"Our custom field we added to our placement type.",
     "":"Ensures this structure spawns 1200 blocks away from world center.",

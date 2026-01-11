@@ -41,10 +41,10 @@
   "start_height": {
     "type": "minecraft:uniform",
     "min_inclusive": {
-      "absolute": 5
+      "absolute": 60
     },
     "max_inclusive": {
-      "absolute": 251
+      "absolute": 140
     }
   },
   "":" This will prevent the structure from placing pieces within 5 blocks of world bottom OR within 5 blocks of world top.",
