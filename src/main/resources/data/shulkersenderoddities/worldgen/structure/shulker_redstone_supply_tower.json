@@ -61,5 +61,24 @@
 
   "":"What mobs can spawn over time in the structure.",
   "":"Make sure you add the mob to the right category (monster, creature, etc)",
-  "spawn_overrides": {}
+  "spawn_overrides": {
+    "monster": {
+      "bounding_box": "piece",
+      "": "Use the bounding box of individual pieces instead of the entire structure's bounds.",
+      "spawns": [
+        {
+          "type": "minecraft:shulker",
+          "weight": 5,
+          "minCount": 1,
+          "maxCount": 2
+        },
+        {
+          "type": "minecraft:enderman",
+          "weight": 4,
+          "minCount": 1,
+          "maxCount": 2
+        }
+      ]
+    }
+  }
 }
