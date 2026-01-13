@@ -22,12 +22,12 @@ import net.minecraft.world.level.levelgen.structure.templatesystem.LiquidSetting
 
 import java.util.Optional;
 
-public class DF_End_Pillar extends Structure {
+public class ShulkerRedstoneSupplyTower extends Structure {
 
     // A custom codec that changes the size limit for our code_structure_end_phantom_balloon.json's config to not be capped at 7.
     // With this, we can have a structure with a size limit up to 30 if we want to have extremely long branches of pieces in the structure.
-    public static final MapCodec<DF_End_Pillar> CODEC = RecordCodecBuilder.mapCodec(instance ->
-            instance.group(DF_End_Pillar.settingsCodec(instance),
+    public static final MapCodec<ShulkerRedstoneSupplyTower> CODEC = RecordCodecBuilder.mapCodec(instance ->
+            instance.group(ShulkerRedstoneSupplyTower.settingsCodec(instance),
                     StructureTemplatePool.CODEC.fieldOf("start_pool").forGetter(structure -> structure.startPool),
                     Identifier.CODEC.optionalFieldOf("start_jigsaw_name").forGetter(structure -> structure.startJigsawName),
                     Codec.intRange(0, 30).fieldOf("size").forGetter(structure -> structure.size),
@@ -36,7 +36,7 @@ public class DF_End_Pillar extends Structure {
                     JigsawStructure.MaxDistance.CODEC.fieldOf("max_distance_from_center").forGetter(structure -> structure.maxDistanceFromCenter),
                     DimensionPadding.CODEC.optionalFieldOf("dimension_padding", JigsawStructure.DEFAULT_DIMENSION_PADDING).forGetter(structure -> structure.dimensionPadding),
                     LiquidSettings.CODEC.optionalFieldOf("liquid_settings", JigsawStructure.DEFAULT_LIQUID_SETTINGS).forGetter(structure -> structure.liquidSettings)
-            ).apply(instance, DF_End_Pillar::new));
+            ).apply(instance, ShulkerRedstoneSupplyTower::new));
 
     private final Holder<StructureTemplatePool> startPool;
     private final Optional<Identifier> startJigsawName;
@@ -47,15 +47,15 @@ public class DF_End_Pillar extends Structure {
     private final DimensionPadding dimensionPadding;
     private final LiquidSettings liquidSettings;
 
-    public DF_End_Pillar(StructureSettings config,
-                               Holder<StructureTemplatePool> startPool,
-                               Optional<Identifier> startJigsawName,
-                               int size,
-                               HeightProvider startHeight,
-                               Optional<Heightmap.Types> projectStartToHeightmap,
-                               JigsawStructure.MaxDistance maxDistanceFromCenter,
-                               DimensionPadding dimensionPadding,
-                               LiquidSettings liquidSettings)
+    public ShulkerRedstoneSupplyTower(StructureSettings config,
+                              Holder<StructureTemplatePool> startPool,
+                              Optional<Identifier> startJigsawName,
+                              int size,
+                              HeightProvider startHeight,
+                              Optional<Heightmap.Types> projectStartToHeightmap,
+                              JigsawStructure.MaxDistance maxDistanceFromCenter,
+                              DimensionPadding dimensionPadding,
+                              LiquidSettings liquidSettings)
     {
         super(config);
         this.startPool = startPool;
@@ -113,7 +113,7 @@ public class DF_End_Pillar extends Structure {
 
         // Check if the spot is valid for our structure. This is just as another method for cleanness.
         // Returning an empty optional tells the game to skip this spot as it will not generate the structure.
-        if (!DF_End_Pillar.extraSpawningChecks(context)) {
+        if (!ShulkerRedstoneSupplyTower.extraSpawningChecks(context)) {
             return Optional.empty();
         }
 
@@ -153,6 +153,6 @@ public class DF_End_Pillar extends Structure {
 
     @Override
     public StructureType<?> type() {
-        return SEOStructures.DF_END_PILLAR.get(); // Helps the game know how to turn this structure back to json to save to chunks
+        return SEOStructures.SHULKER_REDSTONE_SUPPLY_TOWER.get(); // Helps the game know how to turn this structure back to json to save to chunks
     }
 }

@@ -1,0 +1,16 @@
+{
+  "name": "shulkersenderoddities:ender_puzzle_capsule_pool_top",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "name": "shulkersenderoddities:ender_puzzle_capsule_top",
+        "location": "shulkersenderoddities:ender_puzzle_capsule/ender_puzzle_capsule_top",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+}

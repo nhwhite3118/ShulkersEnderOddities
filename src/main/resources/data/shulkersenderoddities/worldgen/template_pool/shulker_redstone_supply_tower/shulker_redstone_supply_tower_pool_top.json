@@ -1,0 +1,36 @@
+{
+  "name": "shulkersenderoddities:shulker_redstone_supply_tower_pool_top",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "name": "shulkersenderoddities:shulker_redstone_supply_tower_top",
+        "location": "shulkersenderoddities:shulker_redstone_supply_tower/shulker_redstone_supply_tower_top",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "name": "shulkersenderoddities:shulker_redstone_supply_tower_top_var1",
+        "location": "shulkersenderoddities:shulker_redstone_supply_tower/shulker_redstone_supply_tower_top_var1",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 3,
+      "element": {
+        "name": "shulkersenderoddities:shulker_redstone_supply_tower_top_var2",
+        "location": "shulkersenderoddities:shulker_redstone_supply_tower/shulker_redstone_supply_tower_top_var2",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+}

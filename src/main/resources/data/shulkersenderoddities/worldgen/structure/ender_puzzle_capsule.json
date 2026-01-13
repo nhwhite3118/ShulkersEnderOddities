@@ -3,15 +3,15 @@
   "":"Since we are using a custom structure class with its own codec, you'll notice there's no use_expansion_hack field",
   "":"below like the minecraft:jigsaw structure type has. This is because our custom structure's codec does not have",
   "":"that field because we should not need expansion hacks for our structures. It's only for legacy Minecraft villages.",
-  "type": "shulkersenderoddities:df_end_pillar",
+  "type": "shulkersenderoddities:ender_puzzle_capsule",
 
   "":"the path to the template pool json file to use",
-  "start_pool": "shulkersenderoddities:df_end_pillar_pool_top",
+  "start_pool": "shulkersenderoddities:ender_puzzle_capsule/ender_puzzle_capsule_pool_top",
 
   "":"If this field is present, the game will look for a downward facing Jigsaw Block with this Name field in the chosen start piece.",
   "":"Once found, it will then spawn the start piece so that it's Jigsaw Block is now the true structure center position.",
   "":"If this field is not present, the start piece will spawn where the structure's true scenter position is the corner of the starting piece.",
-  "start_jigsaw_name": "shulkersenderoddities:df_end_pillar_down",
+  "start_jigsaw_name": "shulkersenderoddities:ender_puzzle_capsule_down",
 
   "":"This is how many pieces away from the starting piece a piece of the structure can spawn",
   "":"Think of it like the length of the branch of the structure",
@@ -26,7 +26,7 @@
   },
 
   "":"The biome tag to use for what biomes that this structure can spawn in",
-  "biomes": "#shulkersenderoddities:has_structure/df_end_pillar_biomes",
+  "biomes": "#shulkersenderoddities:has_structure/ender_puzzle_capsule_biomes",
 
   "":"The generation step for when to generate the structure. there are 10 stages you can pick from!",
   "":"This surface structure stage places the structure before plants and ores are generated",
@@ -41,10 +41,10 @@
   "start_height": {
     "type": "minecraft:uniform",
     "min_inclusive": {
-      "absolute": 5
+      "absolute": 40
     },
     "max_inclusive": {
-      "absolute": 251
+      "absolute": 70
     }
   },
   "":" This will prevent the structure from placing pieces within 5 blocks of world bottom OR within 5 blocks of world top.",

@@ -1,0 +1,33 @@
+{
+  "name": "shulkersenderoddities:ender_puzzle_capsule_pool_down",
+  "fallback": "shulkersenderoddities:ender_puzzle_capsule/ender_puzzle_capsule_pool_base",
+  "elements": [
+    {
+      "weight": 40,
+      "element": {
+        "location": "shulkersenderoddities:ender_puzzle_capsule/ender_puzzle_capsule_loot1",
+        "processors": "minecraft:empty",
+		"projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+	{	
+      "weight": 40,
+      "element": {
+        "location": "shulkersenderoddities:ender_puzzle_capsule/ender_puzzle_capsule_loot2",
+        "processors": "minecraft:empty",
+		"projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 20,
+      "element": {
+        "location": "shulkersenderoddities:ender_puzzle_capsule/ender_puzzle_capsule_base",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+}

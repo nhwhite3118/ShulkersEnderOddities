@@ -1,0 +1,24 @@
+{
+  "name": "shulkersenderoddities:shulker_redstone_supply_tower_pool_start",
+  "fallback": "shulkersenderoddities:shulker_redstone_supply_tower/shulker_redstone_supply_tower_pool_up",
+  "elements": [
+    {
+      "weight": 75,
+      "element": {
+        "location": "shulkersenderoddities:shulker_redstone_supply_tower/purpur_windmill_pillar_damaged",
+        "processors": "minecraft:empty",
+		"projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+	{	
+      "weight": 40,
+      "element": {
+        "location": "shulkersenderoddities:shulker_redstone_supply_tower/purpur_windmill_pillar",
+        "processors": "minecraft:empty",
+		"projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+}

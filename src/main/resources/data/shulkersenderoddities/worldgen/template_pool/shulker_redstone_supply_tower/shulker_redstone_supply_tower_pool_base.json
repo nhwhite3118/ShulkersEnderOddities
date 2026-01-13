@@ -1,11 +1,11 @@
 {
-  "name": "shulkersenderoddities:df_end_pillar_pool_base",
+  "name": "shulkersenderoddities:shulker_redstone_supply_tower_pool_base",
   "fallback": "minecraft:empty",
   "elements": [
     {
       "weight": 1,
       "element": {
-        "location": "shulkersenderoddities:df_end_pillar_base",
+        "location": "shulkersenderoddities:shulker_redstone_supply_tower/purpur_void_chandelier",
         "processors": "minecraft:empty",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
