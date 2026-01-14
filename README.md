@@ -1,25 +1,8 @@
 
-Installation information
+Shulker's Ender Oddities
 =======
 
-This template repository can be directly cloned to get you started with a new
-mod. Simply create a new repository cloned from this one, by following the
-instructions provided by [GitHub](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template).
+Mod files for players and current feature [descriptions](https://www.curseforge.com/minecraft/mc-mods/shulkers-ender-oddities) (with [pictures](https://www.curseforge.com/minecraft/mc-mods/shulkers-ender-oddities/gallery)!) are availible at [Curseforge](https://www.curseforge.com/minecraft/mc-mods/shulkers-ender-oddities)  
+If you don't know what you're doing here, try the Curseforge page.
 
-Once you have your clone, simply open the repository in the IDE of your choice. The usual recommendation for an IDE is either IntelliJ IDEA or Eclipse.
-
-If at any point you are missing libraries in your IDE, or you've run into problems you can
-run `gradlew --refresh-dependencies` to refresh the local cache. `gradlew clean` to reset everything 
-{this does not affect your code} and then start the process again.
-
-Mapping Names:
-============
-By default, the MDK is configured to use the official mapping names from Mojang for methods and fields 
-in the Minecraft codebase. These names are covered by a specific license. All modders should be aware of this
-license. For the latest license text, refer to the mapping file itself, or the reference copy here:
-https://github.com/NeoForged/NeoForm/blob/main/Mojang.md
-
-Additional Resources: 
-==========
-Community Documentation: https://docs.neoforged.net/  
-NeoForged Discord: https://discord.neoforged.net/
+Shulker's Ender Oddities is currently in open alpha. **_Breaking changes are possible between alpha versions._** If you're ok with that, you can [download the mod files here.](https://www.curseforge.com/minecraft/mc-mods/shulkers-ender-oddities/files/all?page=1&pageSize=20&showAlphaFiles=show)
