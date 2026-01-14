@@ -3,6 +3,7 @@ package com.nhwhite3118.shulkersenderoddities.structures;
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.MapCodec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
+import com.nhwhite3118.shulkersenderoddities.Config;
 import com.nhwhite3118.shulkersenderoddities.SEOStructures;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Holder;
@@ -105,7 +106,7 @@ public class EnderPuzzleCapsule extends Structure {
 //                context.heightAccessor(),
 //                context.randomState());
 
-        return true;
+        return Config.SPAWN_ENDER_PUZZLE_CAPSULES.getAsBoolean();
     }
 
     @Override
