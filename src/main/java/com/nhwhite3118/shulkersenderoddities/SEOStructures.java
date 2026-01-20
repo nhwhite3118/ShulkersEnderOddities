@@ -2,6 +2,7 @@ package com.nhwhite3118.shulkersenderoddities;
 
 import com.mojang.serialization.MapCodec;
 import com.nhwhite3118.shulkersenderoddities.structures.EnderPuzzleCapsule;
+import com.nhwhite3118.shulkersenderoddities.structures.RazedCity;
 import com.nhwhite3118.shulkersenderoddities.structures.ShulkerRedstoneSupplyTower;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.level.levelgen.structure.Structure;
@@ -21,9 +22,9 @@ public class SEOStructures {
      * Registers the base structure itself and sets what its path is. In this case,
      * this base structure will have the resourcelocation of shulkersenderoddities:ender_puzzle_capsule.
      */
-    public static final DeferredHolder<StructureType<?>, StructureType<EnderPuzzleCapsule>> ENDER_PUZZLE_CAPSULE = DEFERRED_REGISTRY_STRUCTURE.register("ender_puzzle_capsule", () -> explicitStructureTypeTyping(EnderPuzzleCapsule.CODEC));
-
+    public static final DeferredHolder<StructureType<?>, StructureType<EnderPuzzleCapsule>>         ENDER_PUZZLE_CAPSULE = DEFERRED_REGISTRY_STRUCTURE.register("ender_puzzle_capsule", () -> explicitStructureTypeTyping(EnderPuzzleCapsule.CODEC));
     public static final DeferredHolder<StructureType<?>, StructureType<ShulkerRedstoneSupplyTower>> SHULKER_REDSTONE_SUPPLY_TOWER = DEFERRED_REGISTRY_STRUCTURE.register("shulker_redstone_supply_tower", () -> explicitStructureTypeTyping(ShulkerRedstoneSupplyTower.CODEC));
+    public static final DeferredHolder<StructureType<?>, StructureType<RazedCity>>                  RAZED_CITY = DEFERRED_REGISTRY_STRUCTURE.register("razed_city", () -> explicitStructureTypeTyping(RazedCity.CODEC));
 
     /** TelepathicGrunt:
      * Originally, I had a double lambda ()->()-> for the RegistryObject line above, but it turns out that

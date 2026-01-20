@@ -49,6 +49,10 @@ public class Config {
             .comment("Whether to spawn Shulker Redstone Towers")
             .define("spawn_shulker_redstone_tower", true);
 
+    public static final ModConfigSpec.BooleanValue SPAWN_RAZED_CITY = BUILDER
+            .comment("Whether to spawn Razed Cities")
+            .define("spawn_razed_cities", true);
+
     static final ModConfigSpec SPEC = BUILDER.build();
 
 //    private static boolean validateItemName(final Object obj) {
