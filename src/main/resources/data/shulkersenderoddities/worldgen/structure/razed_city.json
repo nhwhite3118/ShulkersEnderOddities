@@ -15,7 +15,7 @@
 
   "":"This is how many pieces away from the starting piece a piece of the structure can spawn",
   "":"Think of it like the length of the branch of the structure",
-  "size": 30,
+  "size": 20,
 
   "":" Maximum distance away from center that pieces can spawn.",
   "":" Horizontal cannot be bigger than 128 or else pieces gets cutoff. If terrain adaption is present and set to not `none`, max horizontal is 116.",
@@ -37,11 +37,10 @@
   "":" start_height can be used to spawn at a random y value by using an object such as `minecraft:uniform` type",
   "":" If project_start_to_heightmap is present, the y value chosen in start_height will be added to the terrain's y value.",
   "":" So a start height that gives -5 will sink the structure 5 blocks into the terrain.",
-  "":" Here, we will spawn this structure between 10 to 40 blocks above terrain surface.",
   "start_height": {
     "type": "minecraft:uniform",
     "min_inclusive": {
-      "absolute": 40
+      "absolute": 56
     },
     "max_inclusive": {
       "absolute": 70
