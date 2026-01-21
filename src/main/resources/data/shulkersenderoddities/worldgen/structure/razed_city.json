@@ -15,7 +15,7 @@
 
   "":"This is how many pieces away from the starting piece a piece of the structure can spawn",
   "":"Think of it like the length of the branch of the structure",
-  "size": 20,
+  "size": 30,
 
   "":" Maximum distance away from center that pieces can spawn.",
   "":" Horizontal cannot be bigger than 128 or else pieces gets cutoff. If terrain adaption is present and set to not `none`, max horizontal is 116.",
