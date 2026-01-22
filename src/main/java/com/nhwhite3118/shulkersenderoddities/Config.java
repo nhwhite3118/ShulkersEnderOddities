@@ -41,6 +41,18 @@ public class Config {
 //            .comment("Average number of chunks between ender puzzle capsules (ender_puzzle_capsule). Must be greater than separation.")
 //            .defineInRange("enderPuzzleCapsuleSeparation", 32, 1, Integer.MAX_VALUE);
 
+    public static final ModConfigSpec.BooleanValue SPAWN_ENDER_PUZZLE_CAPSULES = BUILDER
+            .comment("Whether to spawn Ender Puzzle Capsules")
+            .define("spawn_ender_puzzle_capsule", true);
+
+    public static final ModConfigSpec.BooleanValue SPAWN_SHULKER_REDSTONE_SUPPLY_TOWERS = BUILDER
+            .comment("Whether to spawn Shulker Redstone Towers")
+            .define("spawn_shulker_redstone_tower", true);
+
+    public static final ModConfigSpec.BooleanValue SPAWN_RAZED_CITY = BUILDER
+            .comment("Whether to spawn Razed Cities")
+            .define("spawn_razed_cities", true);
+
     static final ModConfigSpec SPEC = BUILDER.build();
 
 //    private static boolean validateItemName(final Object obj) {

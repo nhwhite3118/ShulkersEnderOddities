@@ -22,13 +22,9 @@ import net.minecraft.world.level.levelgen.structure.structures.JigsawStructure;
 import net.minecraft.world.level.levelgen.structure.templatesystem.LiquidSettings;
 
 import java.util.Optional;
-
-public class EnderPuzzleCapsule extends Structure {
-
-    // A custom codec that changes the size limit for our code_structure_end_phantom_balloon.json's config to not be capped at 7.
-    // With this, we can have a structure with a size limit up to 30 if we want to have extremely long branches of pieces in the structure.
-    public static final MapCodec<EnderPuzzleCapsule> CODEC = RecordCodecBuilder.mapCodec(instance ->
-            instance.group(EnderPuzzleCapsule.settingsCodec(instance),
+public class RazedCity extends Structure {
+    public static final MapCodec<RazedCity> CODEC = RecordCodecBuilder.mapCodec(instance ->
+            instance.group(RazedCity.settingsCodec(instance),
                     StructureTemplatePool.CODEC.fieldOf("start_pool").forGetter(structure -> structure.startPool),
                     Identifier.CODEC.optionalFieldOf("start_jigsaw_name").forGetter(structure -> structure.startJigsawName),
                     Codec.intRange(0, 30).fieldOf("size").forGetter(structure -> structure.size),
@@ -37,7 +33,7 @@ public class EnderPuzzleCapsule extends Structure {
                     JigsawStructure.MaxDistance.CODEC.fieldOf("max_distance_from_center").forGetter(structure -> structure.maxDistanceFromCenter),
                     DimensionPadding.CODEC.optionalFieldOf("dimension_padding", JigsawStructure.DEFAULT_DIMENSION_PADDING).forGetter(structure -> structure.dimensionPadding),
                     LiquidSettings.CODEC.optionalFieldOf("liquid_settings", JigsawStructure.DEFAULT_LIQUID_SETTINGS).forGetter(structure -> structure.liquidSettings)
-            ).apply(instance, EnderPuzzleCapsule::new));
+            ).apply(instance, RazedCity::new));
 
     private final Holder<StructureTemplatePool> startPool;
     private final Optional<Identifier> startJigsawName;
@@ -48,7 +44,7 @@ public class EnderPuzzleCapsule extends Structure {
     private final DimensionPadding dimensionPadding;
     private final LiquidSettings liquidSettings;
 
-    public EnderPuzzleCapsule(StructureSettings config,
+    public RazedCity(Structure.StructureSettings config,
                               Holder<StructureTemplatePool> startPool,
                               Optional<Identifier> startJigsawName,
                               int size,
@@ -69,63 +65,33 @@ public class EnderPuzzleCapsule extends Structure {
         this.liquidSettings = liquidSettings;
     }
 
-    /*
-     * This is where extra checks can be done to determine if the structure can spawn here.
-     * This only needs to be overridden if you're adding additional spawn conditions.
-     *
-     * Fun fact, if you set your structure separation/spacing to be 0/1, you can use
-     * extraSpawningChecks to return true only if certain chunk coordinates are passed in
-     * which allows you to spawn structures only at certain coordinates in the world.
-     *
-     * Basically, this method is used for determining if the land is at a suitable height,
-     * if certain other structures are too close or not, or some other restrictive condition.
-     *
-     * For example, Pillager Outposts added a check to make sure it cannot spawn within 10 chunk of a Village.
-     * (Bedrock Edition seems to not have the same check)
-     *
-     * If you are doing Nether structures, you'll probably want to spawn your structure on top of ledges.
-     * Best way to do that is to use getBaseColumn to grab a column of blocks at the structure's x/z position.
-     * Then loop through it and look for land with air above it and set blockpos's Y value to it.
-     * Make sure to set the final boolean in JigsawPlacement.addPieces to false so
-     * that the structure spawns at blockpos's y value instead of placing the structure on the Bedrock roof!
-     *
-     * Also, please for the love of god, do not do dimension checking here.
-     * If you do and another mod's dimension is trying to spawn your structure,
-     * the locate command will make minecraft hang forever and break the game.
-     * Use the biome tags for where to spawn the structure and users can datapack
-     * it to spawn in specific biomes that aren't in the dimension they don't like if they wish.
-     */
-    private static boolean extraSpawningChecks(GenerationContext context) {
-        // Grabs the chunk position we are at
-//        ChunkPos chunkpos = context.chunkPos();
+    private static boolean extraSpawningChecks(Structure.GenerationContext context) {
 
-//        int groundLevel = context.chunkGenerator().getFirstOccupiedHeight(
-//                chunkpos.getMinBlockX(),
-//                chunkpos.getMinBlockZ(),
-//                Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
-//                context.heightAccessor(),
-//                context.randomState());
+        ChunkPos chunkpos = context.chunkPos();
+        boolean notVoid = context.chunkGenerator().getFirstOccupiedHeight(
+                chunkpos.getMinBlockX(),
+                chunkpos.getMinBlockZ(),
+                Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
+                context.heightAccessor(),
+                context.randomState()) > context.chunkGenerator().getMinY();
 
-        return Config.SPAWN_ENDER_PUZZLE_CAPSULES.getAsBoolean();
+        return notVoid && Config.SPAWN_RAZED_CITY.getAsBoolean();
     }
 
     @Override
-    public Optional<GenerationStub> findGenerationPoint(GenerationContext context) {
+    public Optional<Structure.GenerationStub> findGenerationPoint(Structure.GenerationContext context) {
 
-        // Check if the spot is valid for our structure. This is just as another method for cleanness.
-        // Returning an empty optional tells the game to skip this spot as it will not generate the structure.
-        if (!EnderPuzzleCapsule.extraSpawningChecks(context)) {
+        if (!RazedCity.extraSpawningChecks(context)) {
             return Optional.empty();
         }
 
-        // Set's our spawning blockpos's y offset.
         int startY = this.startHeight.sample(context.random(), new WorldGenerationContext(context.chunkGenerator(), context.heightAccessor()));
 
         // Turns the chunk coordinates into actual coordinates we can use. (Gets corner of that chunk)
         ChunkPos chunkPos = context.chunkPos();
         BlockPos blockPos = new BlockPos(chunkPos.getMinBlockX(), startY, chunkPos.getMinBlockZ());
 
-        Optional<GenerationStub> structurePiecesGenerator =
+        Optional<Structure.GenerationStub> structurePiecesGenerator =
                 JigsawPlacement.addPieces(
                         context, // Used for JigsawPlacement to get all the proper behaviors done.
                         this.startPool, // The starting pool to use to create the structure layout from
@@ -154,6 +120,6 @@ public class EnderPuzzleCapsule extends Structure {
 
     @Override
     public StructureType<?> type() {
-        return SEOStructures.ENDER_PUZZLE_CAPSULE.get(); // Helps the game know how to turn this structure back to json to save to chunks
+        return SEOStructures.RAZED_CITY.get(); // Helps the game know how to turn this structure back to json to save to chunks
     }
 }
