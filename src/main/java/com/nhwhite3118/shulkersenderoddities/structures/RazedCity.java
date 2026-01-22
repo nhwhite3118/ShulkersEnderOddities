@@ -66,7 +66,16 @@ public class RazedCity extends Structure {
     }
 
     private static boolean extraSpawningChecks(Structure.GenerationContext context) {
-        return Config.SPAWN_RAZED_CITY.getAsBoolean();
+
+        ChunkPos chunkpos = context.chunkPos();
+        boolean notVoid = context.chunkGenerator().getFirstOccupiedHeight(
+                chunkpos.getMinBlockX(),
+                chunkpos.getMinBlockZ(),
+                Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
+                context.heightAccessor(),
+                context.randomState()) > context.chunkGenerator().getMinY();
+
+        return notVoid && Config.SPAWN_RAZED_CITY.getAsBoolean();
     }
 
     @Override

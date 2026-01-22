@@ -93,7 +93,7 @@
       }
     },
     {
-      "weight": 1,
+      "weight": 2,
       "element": {
         "location": "shulkersenderoddities:razed_city/roads/endbrick/straight_3x10_var1",
         "processors": "minecraft:empty",
@@ -102,7 +102,7 @@
       }
     },
     {
-      "weight": 1,
+      "weight": 2,
       "element": {
         "location": "shulkersenderoddities:razed_city/roads/endbrick/straight_3x10_var2",
         "processors": "minecraft:empty",
@@ -111,7 +111,7 @@
       }
     },
     {
-      "weight": 1,
+      "weight": 2,
       "element": {
         "location": "shulkersenderoddities:razed_city/roads/endbrick/straight_3x10_var3",
         "processors": "minecraft:empty",
@@ -120,7 +120,7 @@
       }
     },
     {
-      "weight": 1,
+      "weight": 2,
       "element": {
         "location": "shulkersenderoddities:razed_city/roads/endbrick/straight_3x10_var4",
         "processors": "minecraft:empty",
@@ -129,7 +129,7 @@
       }
     },
     {
-      "weight": 1,
+      "weight": 2,
       "element": {
         "location": "shulkersenderoddities:razed_city/roads/endbrick/straight_3x10_var5",
         "processors": "minecraft:empty",
@@ -138,7 +138,7 @@
       }
     },
     {
-      "weight": 1,
+      "weight": 2,
       "element": {
         "location": "shulkersenderoddities:razed_city/roads/endbrick/straight_3x10_var6",
         "processors": "minecraft:empty",
